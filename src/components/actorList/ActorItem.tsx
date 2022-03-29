@@ -1,20 +1,19 @@
 import React, { useState } from "react";
-import { Actor } from "../types";
+import { Actor } from "../../types";
 
 type Props = {
   actor: Actor;
 };
 
 const ActorItem: React.FC<Props> = ({ actor }) => {
-  const [like, setLike] = useState({
-    loading: false,
-    like: false,
+  const [likeState, setLikeState] = useState({
+    liked: false,
   });
 
   const likeClick = () => {
-    setLike((s) => ({
+    setLikeState((s) => ({
       ...s,
-      like: true,
+      liked: true,
     }));
   };
 
@@ -27,10 +26,10 @@ const ActorItem: React.FC<Props> = ({ actor }) => {
       </div>
       <div>Age: {actor.age}</div>
       <div>
-        {like.like ? "Liked! " : "Like it: "}{" "}
+        {likeState.liked ? "Liked! " : "Like it: "}{" "}
         <img
           src={
-            like.like
+            likeState.liked
               ? "https://cdn-icons-png.flaticon.com/512/2107/2107774.png"
               : "https://cdn-icons-png.flaticon.com/512/2107/2107952.png"
           }

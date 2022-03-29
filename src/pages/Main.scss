@@ -1,0 +1,20 @@
+.MainPage {
+  background-color: rgb(60, 60, 60);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .movie_text {
+    width: 40%;
+    margin: 0 auto;
+    text-align: left;
+
+    button {
+      border-width: 0;
+      color: white;
+      background-color: rgb(19, 19, 19);
+      padding: 10px 20px;
+    }
+  }
+}

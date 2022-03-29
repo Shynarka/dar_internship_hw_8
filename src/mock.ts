@@ -5,7 +5,8 @@ export const movies: Movie[] = [
   {
     id: 1,
     title: "Batman",
-    description: "asd",
+    description:
+      "When the Riddler, a sadistic serial killer, begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.",
     duration: 120,
     image:
       "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRBkxgl2A2PhE_6tklFLT0bxn5NLhvhsnpXGhmXBt_zotrlVHmo",
@@ -13,7 +14,8 @@ export const movies: Movie[] = [
   {
     id: 2,
     title: "Spiderman",
-    description: "asd",
+    description:
+      "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.",
     duration: 90,
     image:
       "https://lanthorn.com/wp-content/uploads/2022/01/spider-mannowayhome_lob_crd_02_0.jpg",
@@ -21,7 +23,8 @@ export const movies: Movie[] = [
   {
     id: 3,
     title: "Robin",
-    description: "asd",
+    description:
+      "Robin has been the famous sidekick of Batman in the comics for years, but it’s always been difficult to make him work in film.",
     duration: 120,
     image:
       "https://www.movieguide.org/wp-content/uploads/2019/03/batman_and_robin_ver3.jpg",

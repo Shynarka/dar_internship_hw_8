@@ -1,6 +1,6 @@
 import React from "react";
 import ActorItem from "./ActorItem";
-import { Actor } from "../types";
+import { Actor } from "../../types";
 
 type Props = {
   actors: Actor[];
