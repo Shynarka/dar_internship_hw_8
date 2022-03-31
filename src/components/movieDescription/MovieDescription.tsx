@@ -1,23 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
+import { MovieContext } from "../../contexts/MovieContext";
 
-type Props = {
-  desc: String;
-  onClose?: () => void;
-};
+type Props = {};
 
-const MovieDescription: React.FC<Props> = ({ desc, onClose }) => {
+const MovieDescription: React.FC<Props> = () => {
+  const { movie, changeMovie } = useContext(MovieContext);
   const closeHandler = () => {
-    if (onClose) {
-      onClose();
-    }
+    changeMovie(null);
   };
-  return (
+
+  return movie ? (
     <div>
-      <h4>Description of the Movie:</h4>
-      <p>{desc}</p>
+      <h4>{movie.title} Description:</h4>
+      <p>{movie.description}</p>
       <button onClick={closeHandler}>Cкрыть</button>
     </div>
-  );
+  ) : null;
 };
 
 export default MovieDescription;

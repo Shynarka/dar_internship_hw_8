@@ -13,3 +13,11 @@ export interface Actor {
   age: number;
   image: string;
 }
+
+export interface User {
+  username: string;
+  name: string;
+  surname: string;
+  password: string;
+  avatar: string;
+}

@@ -1,5 +1,4 @@
-import { Movie } from "./types";
-import { Actor } from "./types";
+import { Movie, Actor, User } from "./types";
 
 export const movies: Movie[] = [
   {
@@ -65,3 +64,12 @@ export const actors: Actor[] = [
       "https://movieplayer.net-cdn.it/t/images/2020/01/27/zendaya_jpg_400x0_crop_q85.jpg",
   },
 ];
+
+export const someUser: User = {
+  username: "Chinbr",
+  name: "Shynar",
+  surname: "Bolatova",
+  password: "password",
+  avatar:
+    "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/help/images/gateway/self-service/account._CB660668669_.png",
+};
