@@ -8,7 +8,10 @@ type Props = {
 
 const ActorList: React.FC<Props> = ({ actors }) => {
   return (
-    <div className="list" style={{ display: "flex", justifyContent: "center" }}>
+    <div
+      className="list"
+      style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}
+    >
       {actors.map((actor) => (
         <ActorItem key={actor.id} actor={actor} />
       ))}
