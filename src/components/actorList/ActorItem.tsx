@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { Actor } from "../../types";
 
 type Props = {
@@ -6,26 +6,30 @@ type Props = {
 };
 
 const ActorItem: React.FC<Props> = ({ actor }) => {
-  const [likeState, setLikeState] = useState({
-    liked: false,
-  });
+  // const [likeState, setLikeState] = useState({
+  //   liked: false,
+  // });
 
-  const likeClick = () => {
-    setLikeState((s) => ({
-      ...s,
-      liked: true,
-    }));
-  };
+  // const likeClick = () => {
+  //   setLikeState((s) => ({
+  //     ...s,
+  //     liked: true,
+  //   }));
+  // };
+  useEffect(() => {
+    console.log(actor);
+  }, []);
 
   return (
     <div className="item" style={{ margin: "1rem" }}>
-      <img src={actor.image} alt={actor.name} style={{ height: "200px" }} />
-      <div>
-        {actor.name + " "}
-        {actor.surname}
-      </div>
-      <div>Age: {actor.age}</div>
-      <div>
+      <img
+        src={"https://cdn.mos.cms.futurecdn.net" + actor.image_path}
+        alt={actor.name}
+        style={{ height: "200px" }}
+      />
+      <div>{actor.name}</div>
+      <div>Rating: {actor.rating}</div>
+      {/* <div>
         {likeState.liked ? "Liked! " : "Like it: "}{" "}
         <img
           src={
@@ -37,7 +41,7 @@ const ActorItem: React.FC<Props> = ({ actor }) => {
           onClick={likeClick}
           style={{ width: "16px" }}
         />
-      </div>
+      </div> */}
     </div>
   );
 };

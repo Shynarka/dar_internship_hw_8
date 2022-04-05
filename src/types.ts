@@ -9,9 +9,9 @@ export interface Movie {
 export interface Actor {
   id: number;
   name: string;
-  surname: string;
-  age: number;
-  image: string;
+  rating: number;
+  alternative_name?: string;
+  image_path: string;
 }
 
 export interface User {

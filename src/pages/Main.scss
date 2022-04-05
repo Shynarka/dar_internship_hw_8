@@ -17,4 +17,16 @@
       padding: 10px 20px;
     }
   }
+
+  .page-item {
+    list-style: none;
+    display: inline-block;
+    border: 1px solid wheat;
+
+    .page-link {
+      text-decoration: none;
+      color: wheat;
+      padding: 10px;
+    }
+  }
 }
