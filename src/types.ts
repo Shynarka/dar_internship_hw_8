@@ -21,3 +21,21 @@ export interface User {
   password: string;
   avatar: string;
 }
+
+export interface Faculty {
+  id: string;
+  name: string;
+}
+
+export interface Course {
+  // id: string;
+  name: string;
+}
+
+export interface Student {
+  id: string;
+  firstName: string;
+  lastName: string;
+  score: number;
+  courses: Course[];
+}

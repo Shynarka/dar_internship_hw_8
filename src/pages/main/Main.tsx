@@ -1,11 +1,11 @@
-import MovieList from "../components/movieList/MovieList";
-import ActorList from "../components/actorList/ActorList";
-import MovieDescription from "../components/movieDescription/MovieDescription";
+import MovieList from "../../components/movieList/MovieList";
+import ActorList from "../../components/actorList/ActorList";
+import MovieDescription from "../../components/movieDescription/MovieDescription";
 import "./Main.scss";
 import { useEffect, useState } from "react";
-import { getMovies } from "../services/movies";
-import { Movie, Actor } from "../types";
-import { getActors } from "../services/actors";
+import { getMovies } from "../../services/movies";
+import { Movie, Actor } from "../../types";
+import { getActors } from "../../services/actors";
 import Pagination from "./Pagination";
 
 const Main = () => {
