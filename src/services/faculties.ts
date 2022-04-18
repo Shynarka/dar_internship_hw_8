@@ -24,3 +24,9 @@ export const editFaculty = (id: string, data: Partial<Faculty>) => {
     .put<Faculty>(`${API_ROOT}/faculties/${id}`, data)
     .then((res) => res.data);
 };
+
+export const deleteFaculty = (id: string) => {
+  return axios
+    .delete<Faculty>(`${API_ROOT}/faculties/${id}`)
+    .then((res) => res.data);
+};

@@ -1,6 +1,8 @@
 import { useState, useEffect, useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import StudentForm from "../../../components/student-form/StudentForm";
+import { StudentContext } from "../../../contexts/StudentContext";
+import { ToastContext } from "../../../contexts/ToastContext";
 import { editStudent, getStudent } from "../../../services/students";
 import { Student } from "../../../types";
 
@@ -8,6 +10,8 @@ const StudentEdit = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [student, setStudent] = useState<Student>();
+  const { dispatch } = useContext(StudentContext);
+  const { dispatch: toastDispatch } = useContext(ToastContext);
 
   useEffect(() => {
     if (!id) {
@@ -24,9 +28,21 @@ const StudentEdit = () => {
       return;
     }
 
-    editStudent(id, data).then((res) => {
-      navigate(`/students/${id}`);
-    });
+    editStudent(id, data)
+      .then((res) => {
+        dispatch({ type: "EDIT_STUDENT" });
+        navigate(`/students/${id}`);
+        toastDispatch({
+          type: "SUCCESS",
+          payload: { message: "Student was updated!" },
+        });
+      })
+      .catch((err) => {
+        toastDispatch({
+          type: "ERROR",
+          payload: { message: err.message || "Student edition failed!" },
+        });
+      });
   };
 
   return (
